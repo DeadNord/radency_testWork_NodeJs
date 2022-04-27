@@ -8,5 +8,3 @@ Notes:
 - POST - http://localhost:3000/api/notes --- Записать записку :D
 - DELETE - http://localhost:3000/api/notes/:id --- Удалить записку по ID
 - PATCH - http://localhost:3000/api/notes/:id --- Изменить данные записке по ID
-
-Radency.postman_collection.json Содержит PostMan запросы
