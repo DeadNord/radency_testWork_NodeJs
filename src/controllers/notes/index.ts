@@ -13,3 +13,4 @@ module.exports = {
   removeNoteByIdController,
   patchNoteController,
 };
+export {}

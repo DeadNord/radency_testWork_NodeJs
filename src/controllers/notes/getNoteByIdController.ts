@@ -1,6 +1,7 @@
 const { Note } = require("../../models/index");
+import { Request, Response } from "express";
 
-const getNoteByIdController = async (req, res, next) => {
+const getNoteByIdController = async (req: Request, res: Response) => {
   const { id } = req.params;
   const note = await Note.findById(id);
 
@@ -23,3 +24,4 @@ const getNoteByIdController = async (req, res, next) => {
 };
 
 module.exports = getNoteByIdController;
+export {}

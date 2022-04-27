@@ -1,6 +1,7 @@
 const { Note } = require("../../models/index");
+import { Request, Response } from "express";
 
-const removeNoteByIdController = async (req, res, next) => {
+const removeNoteByIdController = async (req: Request, res: Response) => {
   const { id } = req.params;
   const deleteNote = await Note.findByIdAndRemove(id);
 
@@ -23,3 +24,4 @@ const removeNoteByIdController = async (req, res, next) => {
 };
 
 module.exports = removeNoteByIdController;
+export {}

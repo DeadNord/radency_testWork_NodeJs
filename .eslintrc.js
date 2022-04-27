@@ -3,11 +3,18 @@ module.exports = {
     commonjs: true,
     es2021: true,
     node: true,
-    "jest/globals": true,
   },
-  extends: ["standard", "prettier"],
+  extends: [
+    "standard",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 13,
+    sourceType: "module",
   },
+  plugins: ["@typescript-eslint"],
   rules: {},
 };

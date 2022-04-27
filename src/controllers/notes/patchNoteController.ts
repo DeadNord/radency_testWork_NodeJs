@@ -1,6 +1,7 @@
 const { Note } = require("../../models/index");
+import { Request, Response } from "express";
 
-const patchNoteController = async (req, res, next) => {
+const patchNoteController = async (req: Request, res: Response) => {
   const { id } = req.params;
 
   const updateNote = await Note.findByIdAndUpdate(id, req.body, {
@@ -25,3 +26,4 @@ const patchNoteController = async (req, res, next) => {
 };
 
 module.exports = patchNoteController;
+export {}

@@ -1,6 +1,7 @@
 const { Note } = require("../../models/index");
+import {Request,Response} from "express";
 
-const addNoteController = async (req, res, next) => {
+const addNoteController = async (req: Request, res: Response) => {
   const { content } = req.body;
 
   console.log(content);
@@ -21,3 +22,4 @@ const addNoteController = async (req, res, next) => {
 };
 
 module.exports = addNoteController;
+export {}

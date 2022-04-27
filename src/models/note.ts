@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 const Joi = require("joi");
-const { bool, boolean } = require("joi");
 
 const noteSchema = Schema(
   {
@@ -48,3 +47,5 @@ const patchJoiSchema = Joi.object({
 const Note = model("note", noteSchema);
 
 module.exports = { Note, postJoiSchema, patchJoiSchema };
+
+export {}

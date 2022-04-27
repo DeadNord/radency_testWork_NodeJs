@@ -1,6 +1,7 @@
 const { Note } = require("../../models/index");
+import { Request, Response } from "express";
 
-const getNotesController = async (req, res, next) => {
+const getNotesController = async (req: Request, res: Response) => {
   const notes = await Note.find();
 
   res.json({
@@ -13,3 +14,5 @@ const getNotesController = async (req, res, next) => {
 };
 
 module.exports = getNotesController;
+
+export {}

@@ -1,12 +1,13 @@
 const { Note } = require("../../models/index");
+import { Request, Response } from "express";
 
-const getNotesStatsController = async (req, res, next) => {
+const getNotesStatsController = async (req: Request, res: Response) => {
   const notes = await Note.find();
 
-  const amountNotes = (category, status) => {
+  const amountNotes = (category: string, status: boolean) => {
     return notes
-      .filter(item => item.category === category && item.status === status)
-      .map(item => item.category).length;
+      .filter((item: any) => item.category === category && item.status === status)
+      .map((item: any )=> item.category).length;
   };
 
   const result = [
@@ -37,3 +38,4 @@ const getNotesStatsController = async (req, res, next) => {
 };
 
 module.exports = getNotesStatsController;
+export {}
